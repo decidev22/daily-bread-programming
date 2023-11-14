@@ -3,12 +3,20 @@ import Image from "next/image";
 interface ArticleProps {
   size: "Small" | "Medium" | "Large";
   className?: String;
+  title?: String;
+  content?: String;
 }
 
-const Article: React.FC<ArticleProps> = ({ size, className }) => {
+const Article: React.FC<ArticleProps> = ({
+  size,
+  className,
+  title,
+  content,
+}) => {
   let width;
   let height;
 
+  // Size
   if (size === "Small") {
     width = 150;
     height = 150;
@@ -18,9 +26,19 @@ const Article: React.FC<ArticleProps> = ({ size, className }) => {
     height = 400;
   }
 
+  // Initialise title if none provided
+  if (!title) {
+    title = "Blog Title";
+  }
+
+  // Initialise conent if none provided
+  if (!content) {
+    content = "Content of a blog article.";
+  }
+
   return (
     <div
-      className={`flex w-full h-full border-2 border-black p-2 ${className}`}
+      className={`flex w-full h-full border border-white p-2 ${className}`}
     >
       <div
         className={`flex flex-grow bg-prologue-grey rounded-lg overflow-hidden`}
@@ -44,9 +62,9 @@ const Article: React.FC<ArticleProps> = ({ size, className }) => {
           />
         </div>
       </div>
-      <div className="flex flex-col p-3">
-        <div>Title of a {size} blog article</div>
-        <div>Summary of the blog</div>
+      <div className="flex flex-grow flex-col p-3 h-[100%] max-w-[300px]">
+        <div>{title}</div>
+        <div className="flex-1">{content}</div>
       </div>
     </div>
   );

@@ -1,0 +1,4 @@
+/* This is currently also added to Global css */
+.whiteicon {
+  filter: brightness(0) invert(1);
+}

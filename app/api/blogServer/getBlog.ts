@@ -6,9 +6,7 @@ export const getBlog = (blogid: string) => {
       //axios instead of fetch
       const response = await fetch(url);
       const jsonOutput = await response.json();
-      console.log(jsonOutput);
     } catch (error) {
-      console.log(error);
       throw new Error(`${error}`);
     }
   };

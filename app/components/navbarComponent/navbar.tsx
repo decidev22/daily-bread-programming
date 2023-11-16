@@ -1,5 +1,7 @@
 import Image from "next/image";
 import PrologueLogo from "./PrologueLogo";
+import SearchBar from "./SearchBar";
+import LoginComponent from "./LoginComponent";
 
 export const NavBar = () => {
   return (
@@ -7,8 +9,10 @@ export const NavBar = () => {
       <div className="col-span-2 flex">
         <PrologueLogo />
       </div>
-      <div className="text-center">SearchBar</div>
-      <div className="col-end-6">Login and Profile</div>
+      <SearchBar />
+      <div className="col-end-6">
+        <LoginComponent />
+      </div>
     </div>
   );
 };

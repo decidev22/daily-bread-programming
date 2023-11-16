@@ -37,9 +37,7 @@ const Article: React.FC<ArticleProps> = ({
   }
 
   return (
-    <div
-      className={`flex w-full h-full border border-white p-2 ${className}`}
-    >
+    <div className={`flex w-full h-full p-2 ${className}`}>
       <div
         className={`flex flex-grow bg-prologue-grey rounded-lg overflow-hidden`}
         style={{
@@ -48,7 +46,7 @@ const Article: React.FC<ArticleProps> = ({
           height: `${height}px`,
         }}
       >
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex justify-center items-center w-full h-full border border-slate-700">
           <Image
             src="/example_2.webp"
             alt="Blog Thumbnail"

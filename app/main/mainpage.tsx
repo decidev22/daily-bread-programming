@@ -1,24 +1,21 @@
-import { getNewBlogs } from "../api/blogServer/getNewBlogs";
-import { getPopularBlogs } from "../api/blogServer/getPopularBlogs";
-import { NewBlogContainer } from "../api/blogServer/NewBlogContainer";
-
-import SmallArticle from "../components/articleComponent/SmallArticle";
 import Article from "../components/articleComponent/Article";
 import Image from "next/image";
+import Trending from "../components/trendingComponent/Trending";
 
-export const MainPage = () => {
+interface ArticlesProp {
+  _id: string;
+  title: string;
+  content: string;
+}
+
+export const MainPage = async () => {
   return (
     <div className="flex h-[90vh] p-10 w-full flex-col">
       <div className="flex flex-wrap flex-col w-full">
         <div className="h-[30px]">Featured/Trending</div>
         <div className="h-[30px]">Category selection</div>
         <div className="grid grid-rows-2 grid-cols-3 gap-3">
-          <Article size="Small" />
-          <Article size="Small" />
-          <Article size="Small" />
-          <Article size="Small" />
-          <Article size="Small" />
-          <Article size="Small" />
+          <Trending />
         </div>
 
         <div className="h-30">

@@ -1,5 +1,6 @@
-import { ViewBlog } from "./viewBlog";
+import { ViewBlog } from "./[id]/viewBlog";
 
-export default function Blog() {
+const Blog = () => {
   return <div>Blog</div>;
-}
+};
+export default Blog;

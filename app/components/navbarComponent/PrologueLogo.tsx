@@ -6,16 +6,15 @@ import { useRouter } from "next/navigation";
 const PrologueLogo = () => {
   const router = useRouter();
   return (
-    <div className="flex flex-1">
+    <div className="relative flex h-[25px] w-[25px] cursor-pointer">
       <Image
         onClick={() => router.push("/")}
         alt="Prologue Logo"
         src={"/PrologueLogo.png"}
-        height={25}
-        width={25}
-        className="cursor-pointer"
+        layout="fill"
+        objectFit="contain"
       />
-      <p className="px-2 text-lg">Prologue</p>
+      <p className="relative px-8 text-lg">Prologue</p>
     </div>
   );
 };

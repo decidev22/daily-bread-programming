@@ -3,10 +3,9 @@ import Article from "../articleComponent/Article";
 const Trending = async () => {
   const trending_res = await fetch(
     "http://localhost:8080/blogs/trending",
+
     {
-      headers: {
-        cache: "no-cache",
-      },
+      cache: "no-store",
     }
   );
   const trending_data = await trending_res.json();

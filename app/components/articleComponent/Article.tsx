@@ -41,24 +41,20 @@ const Article: React.FC<ArticleProps> = ({
       <div
         className={`flex flex-grow bg-prologue-grey rounded-lg overflow-hidden`}
         style={{
-          maxWidth: `${width}px`,
+          minWidth: `${width}px`,
           width: `${width}px`,
           height: `${height}px`,
         }}
       >
-        <div className="flex justify-center items-center w-full h-full border border-slate-700">
-          <Image
-            src="/example_2.webp"
-            alt="Blog Thumbnail"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-            width={width}
-            height={height}
-          />
-        </div>
+        <Image
+          src="/example_2.webp"
+          alt="Blog Thumbnail"
+          style={{
+            objectFit: "cover",
+          }}
+          width={width}
+          height={height}
+        />
       </div>
       <div className="flex flex-grow flex-col p-3 h-[100%] max-w-[300px]">
         <div>{title}</div>

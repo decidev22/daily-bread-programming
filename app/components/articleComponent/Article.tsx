@@ -39,7 +39,7 @@ const Article: React.FC<ArticleProps> = ({
   return (
     <div className={`flex w-full h-full p-2 ${className}`}>
       <div
-        className={`flex flex-grow bg-prologue-grey rounded-lg overflow-hidden`}
+        className={`flex bg-prologue-grey rounded-lg overflow-hidden`}
         style={{
           minWidth: `${width}px`,
           width: `${width}px`,
